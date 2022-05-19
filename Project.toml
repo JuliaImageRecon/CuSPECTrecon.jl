@@ -1,0 +1,9 @@
+name = "CuSPECTrecon"
+uuid = "b1555097-7ec8-4ced-9fc9-cef29521044b"
+authors = ["Zongyu Li and Jeff Fessler"]
+version = "0.0.1"
+
+[deps]
+
+[compat]
+julia = "1.6"
