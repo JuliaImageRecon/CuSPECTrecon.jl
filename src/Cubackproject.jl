@@ -18,7 +18,7 @@ function Cubackproject!(
         # rotate mumap by "-angle"
         Cuimrotate!((@view plan.mumapr[:, :, z]),
                     (@view plan.mumap[:, :, z]),
-                    -plan.viewangle[viewidx],
+                    plan.viewangle[viewidx],
                     plan.planrot)
     end
 
