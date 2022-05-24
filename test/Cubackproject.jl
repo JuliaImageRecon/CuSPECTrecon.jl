@@ -31,7 +31,7 @@ using Random: seed!
 
     backproject!(image, views, plan)
     Cubackproject!(Cuimage, Cuviews, Cuplan)
-    @test isapprox(Array(Cuimage), image; rtol = 0.6) # this is very *large* difference
+    @test isapprox(Array(Cuimage), image; rtol = 5e-2) 
 end
 
 
@@ -63,6 +63,5 @@ end
 
     Cuproject!(forviews, image, Cuplan)
     Cubackproject!(backimage, views, Cuplan)
-    @test isapprox(dot(forviews, views), dot(backimage, image); rtol = 0.05)
-    # have to put rtol = 0.05 to pass the test
+    @test isapprox(dot(forviews, views), dot(backimage, image); rtol = 1e-2)
 end
